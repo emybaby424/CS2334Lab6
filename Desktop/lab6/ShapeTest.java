@@ -117,8 +117,8 @@ public class ShapeTest
 		Shape s1 = new Square("A", 4.0);
 		Shape s2 = new Rectangle("B", 4.0, 1.0);
 		
-		Assert.assertEquals("<<Square>>	 ID = <<A>>	 area = <<16.000>>	 perimeter = <<16.000>>", s1.toString());
-		Assert.assertEquals("<<Rectangle>>	 ID = <<B>>	 area = <<4.000>>	 perimeter = <<10.000>>", s2.toString());
+		Assert.assertEquals("Square:	 ID = A	 area = 16.000	 perimeter = 16.000", s1.toString());
+		Assert.assertEquals("Rectangle:	 ID = B	 area = 4.000	 perimeter = 10.000", s2.toString());
 		
 	}
 
