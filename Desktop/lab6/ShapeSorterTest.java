@@ -133,7 +133,6 @@ public class ShapeSorterTest
 		sorter.addShape(s1);
 		sorter.addShape(s2);
 		
-		Assert.assertEquals("<<Square>>	 ID = <<A>>	 area = <<16.000>>	 perimeter = <<16.000>>", s1.toString());
 		Assert.assertEquals("[<<Square>>	 ID = <<A>>	 area = <<16.000>>	 perimeter = <<16.000>>, <<Rectangle>>	 ID = <<B>>	 area = <<4.000>>	 perimeter = <<10.000>>]", sorter.toString());
 
 	}
