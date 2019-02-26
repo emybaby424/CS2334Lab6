@@ -42,7 +42,26 @@ public class ShapeSorterTest
 	@Test
 	public void SortShapesDefaultTest()
 	{
-		// TODO: complete this...
+		// TODO: complete this..
+		ShapeSorter sorter = new ShapeSorter();
+		
+		Shape a = new Rectangle("test", 2, 1);
+		Shape b = new Square("test2", 8);
+		Shape c = new Circle("test3", 2);
+		Shape d = new EquilateralTriangle("test4", 4);
+		
+		sorter.addShape(c);
+		sorter.addShape(d);
+		sorter.addShape(a);
+		sorter.addShape(b);
+		
+		sorter.sortShapes();
+		
+		Assert.assertEquals(a, sorter.shapes.get(0));
+		Assert.assertEquals(d, sorter.shapes.get(1));
+		Assert.assertEquals(c, sorter.shapes.get(2));
+		Assert.assertEquals(b, sorter.shapes.get(3));
+		
 	}
 
 	/**

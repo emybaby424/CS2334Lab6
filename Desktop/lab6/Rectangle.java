@@ -13,7 +13,10 @@ public class Rectangle extends Polygon {
 		this.height = height;
 		
 		sideLengths.add(width);
+		sideLengths.add(width);
 		sideLengths.add(height);
+		sideLengths.add(height);
+
 	}
 	
 	

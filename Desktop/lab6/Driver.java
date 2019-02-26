@@ -31,7 +31,7 @@ public class Driver
 		sorter.addShape(s4);
 		sorter.addShape(s3);
 		sorter.addShape(s5);
-
+		
 		// Print unsorted:
 		System.out.println("###");
 		System.out.println(sorter);

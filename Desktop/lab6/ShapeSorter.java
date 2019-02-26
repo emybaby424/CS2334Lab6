@@ -73,7 +73,7 @@ public class ShapeSorter
 	public String toString()
 	{
 		// TODO: complete this...
-		return String.format("%s", shapes.toString());
+		return shapes.toString();
 	}
 
 }
