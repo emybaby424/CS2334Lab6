@@ -134,6 +134,16 @@ public class ShapeSorterTest
 		sorter.addShape(s2);
 		
 		Assert.assertEquals("[Square:	 ID = A	 area = 16.000	 perimeter = 16.000, Rectangle:	 ID = B	 area = 4.000	 perimeter = 10.000]", sorter.toString());
+		
+		Shape s3 = new Trapezoid("C", 2.0, 3.0, 4.0, 1.0);
+		Shape s4 = new Circle("D", 1.0);
+		Shape s5 = new EquilateralTriangle("E", 1.0);
+		
+		sorter.addShape(s3);
+		sorter.addShape(s4);
+		sorter.addShape(s5);
+		
+		Assert.assertEquals("[Square:	 ID = A	 area = 16.000	 perimeter = 16.000, Rectangle:	 ID = B	 area = 4.000	 perimeter = 10.000, Trapezoid:	 ID = C	 area = 4.714	 perimeter = 10.000, Circle:	 ID = D	 area = 3.142	 perimeter = 6.283, EquilateralTriangle:	 ID = E	 area = 0.433	 perimeter = 3.000]", sorter.toString());
 
 	}
 }
