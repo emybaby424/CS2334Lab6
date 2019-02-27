@@ -186,13 +186,20 @@ public class ShapeTest
 		// TODO: complete this...
 		Shape a = new Circle("A", 4.0);
 		Shape b = new Circle("B", 4.0);
-		Shape c = new Ellipse("C", 2.0, 7.0);
 		
 		Assert.assertEquals("CompareTest should find shapes equal", 0, a.compareTo(b));
-		Assert.assertEquals("CompareTest found shapes incorrectly inequal", 1, a.compareTo(c));
-		Assert.assertEquals("CompareTest found shapes incorrectly inequal", 1, b.compareTo(c));
+		
+		//Test equal perimeter, different area
+		Shape c = new Rectangle("C", 1.0, 9.0);
+		Shape d = new Square("D", 5.0);
+		Assert.assertEquals("CompareTest found shapes incorrectly inequal", -1, c.compareTo(d));
+		Assert.assertEquals("CompareTest found shapes incorrectly inequal", 1, d.compareTo(c));
 
-
+		//Test unequal perimeter but equal area
+		Shape e = new Rectangle("E", 12.0, 3.0);
+		Shape f = new Square("F", 6.0);
+		Assert.assertEquals("CompareTest found shapes incorrectly inequal", 1, e.compareTo(f));
+		Assert.assertEquals("CompareTest found shapes incorrectly inequal", -1, f.compareTo(e));
 		
     }
 }
